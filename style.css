@@ -1,0 +1,185 @@
+*{
+  position: relative;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,p{
+  padding: 0;
+  margin: 0;
+}
+ul,li{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+body{
+  background-color: #474E68;
+}
+
+/*--------------*\ 
+    Layout 
+\*--------------*/
+.row{
+  display: flex;
+  height: 100%;
+  padding-bottom: 50px;
+}
+.col-6-12{
+  width: 50%;
+}
+
+/*--------------*\ 
+  Component 
+\*--------------*/
+/* btn */
+.btn{
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-radius: 4px;
+  background-color: #50577A;
+  color: #EEEEEE;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  cursor: pointer;
+  user-select: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.btn:hover{
+  background-color: #6B728E;
+}
+
+/* image */
+.image__container{
+  width: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.image__container:before{
+  display: block;
+  content: '';
+  width: 100%;
+  padding-top: 100%;
+}
+.image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* navbar */
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #000;
+  z-index: 100;
+}
+.navbar.active{
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.navbar .container{
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .nav__logo{
+  display: flex;
+}
+.navbar .logo__image{
+  width: 40px;
+  height: 40px;
+  background-image: url('https://www.svgrepo.com/show/128722/profile.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.navbar .nav__title{
+  color: #74798f;
+  font-size: 30px;
+  line-height: 70px;
+  margin-left: 10px;
+}
+.main{
+  padding-top: 100px;
+  padding-bottom: 220px;
+}
+.main .container{
+  width: 1200px;
+  margin: 0 auto;
+}
+.main .container .title{
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.card{
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 2px solid #6B728E;
+}
+.avatar{
+  padding-top: 20px;
+}
+.profile{
+  padding: 20px 30px;
+}
+.profile .profile__title{
+  color: #F0FF42;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.profile .list{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.profile .item{
+  font-family: 'Cabin', sans-serif;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 18px;
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.profile .item .info{
+  padding-left: 10px;
+}
+
+/* fooetr */
+.footer{
+  padding-top: 500px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #474E68;
+}
+.footer .copyright{
+  border-top: 1px solid #74798f;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  font-size: 12px;
+  color: #74798f;
+}
