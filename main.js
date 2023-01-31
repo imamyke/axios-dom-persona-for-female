@@ -1,7 +1,7 @@
 const refresh = document.querySelector('.refresh')
 const mainContainer = document.querySelector('.main .container')
 
-refresh.addEventListener('click', function () {
+const refreshPersona = () => {
   axios.get('https://webdev.alphacamp.io/api/v1/users/random?results=3&gender=female')
     .then((res) => {
       // 將要增加的 data 資訊存進 addInfoArray
@@ -57,7 +57,9 @@ refresh.addEventListener('click', function () {
     .catch((err) => {
       console.log(err);
     })
-})
+}
+
+refresh.addEventListener('click', refreshPersona)
 
 $(document).ready(function () {
   // 導覽列的變化 偵測視窗滾動事件
